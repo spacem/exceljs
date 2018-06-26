@@ -1,6 +1,5 @@
 declare interface Buffer { }
-declare interface Stream { }
-declare interface Writable { }
+import { Writable, Stream } from 'stream';
 
 export const enum RelationshipType {
 	None = 0,
@@ -217,17 +216,17 @@ export interface FillGradientPath {
 export type Fill = FillPattern | FillGradientAngle | FillGradientPath;
 
 export interface Font {
-	name: string;
-	size: number;
-	family: number;
-	scheme: 'minor' | 'major' | 'none';
-	charset: number;
-	color: Partial<Color>;
-	bold: boolean;
-	italic: boolean;
-	underline: boolean | 'none' | 'single' | 'double' | 'singleAccounting' | 'doubleAccounting';
-	strike: boolean;
-	outline: boolean;
+	name?: string;
+	size?: number;
+	family?: number;
+	scheme?: 'minor' | 'major' | 'none';
+	charset?: number;
+	color?: Partial<Color>;
+	bold?: boolean;
+	italic?: boolean;
+	underline?: boolean | 'none' | 'single' | 'double' | 'singleAccounting' | 'doubleAccounting';
+	strike?: boolean;
+	outline?: boolean;
 }
 
 export type BorderStyle =
